@@ -264,7 +264,7 @@
 % \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\cnsong\slshape\bfseries\color{darktext} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\cnsong\slshape\bf\color{darktext} #1}}
 \newcommand*{\entrysubtitlestyle}[1]{{\fontsize{10pt}{1em}\cnbody\bfseries\color{graytext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\cnsong\slshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}

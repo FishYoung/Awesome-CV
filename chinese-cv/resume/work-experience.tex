@@ -1,4 +1,56 @@
-\cvsection{实习经历}
+\cvsection{项目经历}
+\begin{cventries}
+  \cventry
+    {华东师范大学 \quad 数据科学与工程实验室  } 
+    {分布式内存数据库  \it{CLAIMS(Ginkgo)}}
+    {上海}
+    {2015.05 - 2018.01}
+    {
+      \begin{cvitems}
+	\item {项目介绍：CLAIMS是分布式内存数据库，OLAP，有支持实时注入分析查询，支持弹性流水线等特点。。}
+	\item {工作内容：库解析层的重构开发；数据库的执行引擎的部分实现；分布式JOIN算法实现及优化。部署了CLAIMS的集群监控系统，基于\it{influxdb+collectd+grafana}。}
+	\item {相关技能：分布式系统，数据库，\it{Linux, Shell, C++}}
+      \end{cvitems}
+    }
+
+    \cventry
+    {星环信息科技}
+    {列式存储系统Holodesk}
+    {上海}
+    {2017.07 - 2017.09}
+    {
+      \begin{cvitems}
+        \item {项目介绍：ArgoDB是一款分布式分析型数据库，Holodesk为其默认存储。}
+      \end{cvitems}
+    }
+
+    \cventry
+    {\textbf{开源spark读取Holodesk表生成DataFrame}}{}{}{}
+    {
+        \begin{cvitems}
+          \item {\textbf{工作内容：}主要采用了两种方式来用开源spark读取Holodesk表文件，第一个用开源spark的DataSource API，这种方式相当于只提供数据源，计算逻辑需要另外提供。第二种是通过添加extraOptimizations规则，修改spark sql的执行计划，同时实现对应的ScanRDD，可以适用于spark sql。}
+        \end{cvitems}
+    }
+
+    \cventry
+    {\textbf{基于SuRF的索引}}{}{}{}
+    {
+        \begin{cvitems}
+          \item {\textbf{工作内容：}SuRF来自2018SIGMOD会议上的best paper， 是一种高效的range filter。实现了一个简单版本的SuRF，即采用LOUDS-Sparse编码的SuRF-base。主要用于快速判断文件中是否包含给定范围或值。(这里测试发现，SuRF所占用的存储空间仍比较大，在点查方面布隆过滤更加合适，而且范围查询受到前缀集合的特性影响，并不是十分通用。)}
+        \end{cvitems}
+    }
+
+    \cventry
+    {\textbf{流数据入分析型数据库}}{}{}{}
+    {
+        \begin{cvitems}
+          \item {\textbf{工作内容：}有很多客户的业务场景是对流数据实时处理和计算的基础上，还需要对这些数据或者其计算后的结果集进行复杂的查询和分析。ORC和HBASE做复杂的统计分析比较耗时，因此考虑直接存入ArgoDB中进行分析。}
+        \end{cvitems}
+    }
+
+\end{cventries}
+
+\cvsection{其他项目}
 \begin{cventries}
   \cventry
     {Infosys Instep Intern}
@@ -7,41 +59,9 @@
     {2016.07 - 2016.09}
     {
       \begin{cvitems}
-        \item {参与实现一个分布式实时注入查询的内存数据库, 负责执行引擎的设计和实现。}
-        \item {完成了基于迭代器模式的SQL执行引擎原型，主要模块有语句执行器，语法解析器，逻查询计划，物理查询计划等。}
-        \item {实习结束时支持基本查询语句的解析和部分物理操作符。支持多表的连接，采用复制分片的嵌套循环连接算法。}
-        \item {相关技能：分布式系统，数据库，\it{Spark, Scala, Design Pattern}}
-      \end{cvitems}
-    }
-  \cventry
-    {IT产品部，分布式云存储}
-    {华为}
-    {上海}
-    {2017.07 - 2017.09}
-    {
-      \begin{cvitems}
-        \item {参与分布式云存储系统开发和测试。}
-        \item {学习存储系统和分布式系统的相关知识，了解云存储持久层的设计和实现。同时学习和实践单元测试，熟悉正规的版本管理流程。}
-	\item {完成了相关模块的单元测试和部分工具的文档。}
-        \item {相关技能：分布式存储，\it{C, Gtest}}
+        \item {参与实现一个分布式实时注入查询的内存数据库, 负责执行引擎的设计和实现。完成了基于迭代器模式的SQL执行引擎原型，主要模块有语句执行器，语法解析器，逻查询计划，物理查询计划等。}
       \end{cvitems}
     }
 \end{cventries}
 
-\cvsection{工作经历}
-\begin{cventries}
-  \cventry
-    {研发工程师}
-    {星环信息科技}
-    {上海}
-    {2018.03 - today}
-    {
-      \begin{cvitems}
-        \item {项目名称：分布式存储系统}
-        \item {主要职责：实现分布存储系统的相关功能、性能调优，现场实施及客户支持。}
-        \item {工作收获：了解存储系统的一些原理及知识。熟悉spark相关原理。问题排查能力提高。}
-        \item {相关技能：分布式系统，数据库，\it{Java, Scala}}
-      \end{cvitems}
-    }
-\end{cventries}
 
