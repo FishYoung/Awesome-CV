@@ -7,9 +7,9 @@
     {2015.05 - 2018.01}
     {
       \begin{cvitems}
-	\item {项目介绍：CLAIMS是分布式内存数据库，OLAP，有支持实时注入分析查询，支持弹性流水线等特点。。}
-	\item {工作内容：库解析层的重构开发；数据库的执行引擎的部分实现；分布式JOIN算法实现及优化。部署了CLAIMS的集群监控系统，基于\it{influxdb+collectd+grafana}。}
-	\item {相关技能：分布式系统，数据库，\it{Linux, Shell, C++}}
+	\item {项目介绍：CLAIMS是分布式内存数据库，OLAP，有支持实时注入分析查询，支持弹性流水线等特点。}
+	\item {工作内容：数据库解析层的重构开发；数据库的执行引擎的部分实现；分布式JOIN算法实现及优化。部署了CLAIMS的集群监控系统，基于\it{influxdb+collectd+grafana}。}
+	\item {相关技能：分布式系统，数据库，\it{Linux, C++}}
       \end{cvitems}
     }
 
@@ -17,7 +17,7 @@
     {星环信息科技}
     {列式存储系统Holodesk}
     {上海}
-    {2017.07 - 2017.09}
+    {2018.03 - today}
     {
       \begin{cvitems}
         \item {项目介绍：ArgoDB是一款分布式分析型数据库，Holodesk为其默认存储。}
@@ -36,7 +36,8 @@
     {\textbf{基于SuRF的索引}}{}{}{}
     {
         \begin{cvitems}
-          \item {\textbf{工作内容：}SuRF来自2018SIGMOD会议上的best paper， 是一种高效的range filter。实现了一个简单版本的SuRF，即采用LOUDS-Sparse编码的SuRF-base。主要用于快速判断文件中是否包含给定范围或值。(这里测试发现，SuRF所占用的存储空间仍比较大，在点查方面布隆过滤更加合适，而且范围查询受到前缀集合的特性影响，并不是十分通用。)}
+          \item {\textbf{工作内容：}SuRF来自2018SIGMOD会议上的best paper， 是一种高效的range filter。实现了一个简单版本的SuRF，即采用LOUDS-Sparse编码的SuRF-base。主要用于快速判断文件中是否包含给定范围或值。}
+	  \item {这里测试发现，SuRF所占用的存储空间仍比较大，在点查方面布隆过滤更加合适，而且范围查询受到前缀集合的特性影响，并不是十分通用。}
         \end{cvitems}
     }
 
@@ -44,7 +45,7 @@
     {\textbf{流数据入分析型数据库}}{}{}{}
     {
         \begin{cvitems}
-          \item {\textbf{工作内容：}有很多客户的业务场景是对流数据实时处理和计算的基础上，还需要对这些数据或者其计算后的结果集进行复杂的查询和分析。ORC和HBASE做复杂的统计分析比较耗时，因此考虑直接存入ArgoDB中进行分析。}
+          \item {\textbf{工作内容：}有很多客户的业务场景是对流数据实时处理和计算的基础上，还需要对这些数据或者其计算后的结果集进行复杂的查询和分析。ORC和HBASE做复杂的统计分析比较耗时，因此考虑直接存入ArgoDB中进行分析。在spark中实现了相应的Actor，基于两阶段的提交的模型，将一定时间窗口内的数据持久化到存储层。}
         \end{cvitems}
     }
 
@@ -60,6 +61,7 @@
     {
       \begin{cvitems}
         \item {参与实现一个分布式实时注入查询的内存数据库, 负责执行引擎的设计和实现。完成了基于迭代器模式的SQL执行引擎原型，主要模块有语句执行器，语法解析器，逻查询计划，物理查询计划等。}
+	\item {实质上还是实验室项目的scala版本，语法解析借用早期spark-sql所用的parser，执行引擎相近，暂时没有实现存储相关功能。\\[8pt]}
       \end{cvitems}
     }
 \end{cventries}
