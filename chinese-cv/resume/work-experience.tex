@@ -21,6 +21,7 @@
     {
       \begin{cvitems}
         \item {项目介绍：ArgoDB是一款分布式分析型数据库，Holodesk为其默认存储。}
+        \item {团队规模：4人}
       \end{cvitems}
     }
 
@@ -28,7 +29,7 @@
     {\textbf{开源spark读取Holodesk表生成DataFrame}}{}{}{}
     {
         \begin{cvitems}
-          \item {\textbf{工作内容：}主要采用了两种方式来用开源spark读取Holodesk表文件，第一个用开源spark的DataSource API，这种方式相当于只提供数据源，计算逻辑需要另外提供。第二种是通过添加extraOptimizations规则，修改spark sql的执行计划，同时实现对应的ScanRDD，可以适用于spark sql。}
+          \item {\textbf{工作内容：}该项目主要是为了解决客户对其基于开源spark的应用想读取holodesk表的数据用于计算，不使用ArgoDB的计算引擎。采用了两种方式来用开源spark读取Holodesk表文件，第一个用开源spark的DataSource API，这种方式相当于只提供数据源，计算逻辑需要另外提供。第二种是通过自定义优化规则，修改spark的执行计划，同时实现对应的ScanRDD。本人主要负责第一种方式以及第二种方式中ScanRDD的实现，另一位同事负责注册规则部分。}
         \end{cvitems}
     }
 
@@ -36,7 +37,7 @@
     {\textbf{基于SuRF的索引}}{}{}{}
     {
         \begin{cvitems}
-          \item {\textbf{工作内容：}SuRF来自2018SIGMOD会议上的best paper， 是一种高效的range filter。实现了一个简单版本的SuRF，即采用LOUDS-Sparse编码的SuRF-base。主要用于快速判断文件中是否包含给定范围或值。}
+          \item {\textbf{工作内容：}该项目主要是提供新的轻量级索引，来加速根据范围条件，检索文件的速度。SuRF来自2018SIGMOD会议上的best paper， 是一种高效的range filter。独立完成了一个简单版本的SuRF，即采用LOUDS-Sparse编码的SuRF-base。主要用于快速判断文件中是否包含给定范围或值。}
 	  \item {这里测试发现，SuRF所占用的存储空间仍比较大，在点查方面布隆过滤更加合适，而且范围查询受到前缀集合的特性影响，并不是十分通用。}
         \end{cvitems}
     }
@@ -45,7 +46,7 @@
     {\textbf{流数据入分析型数据库}}{}{}{}
     {
         \begin{cvitems}
-          \item {\textbf{工作内容：}有很多客户的业务场景是对流数据实时处理和计算的基础上，还需要对这些数据或者其计算后的结果集进行复杂的查询和分析。ORC和HBASE做复杂的统计分析比较耗时，因此考虑直接存入ArgoDB中进行分析。在spark中实现了相应的Actor，基于两阶段的提交的模型，将一定时间窗口内的数据持久化到存储层。}
+          \item {\textbf{工作内容：}有很多客户的业务场景是对流数据实时处理和计算的基础上，还需要对这些数据或者其计算后的结果集进行复杂的查询和分析。ORC和HBASE做复杂的统计分析比较耗时，因此考虑直接存入ArgoDB中进行分析。在spark中实现了相应的Actor，基于两阶段的提交的模型，将一定时间窗口内的数据持久化到存储层。\\[10pt]}
         \end{cvitems}
     }
 
@@ -61,7 +62,7 @@
     {
       \begin{cvitems}
         \item {参与实现一个分布式实时注入查询的内存数据库, 负责执行引擎的设计和实现。完成了基于迭代器模式的SQL执行引擎原型，主要模块有语句执行器，语法解析器，逻查询计划，物理查询计划等。}
-	\item {实质上还是实验室项目的scala版本，语法解析借用早期spark-sql所用的parser，执行引擎相近，暂时没有实现存储相关功能。\\[8pt]}
+	    \item {实质上还是实验室项目的scala版本，语法解析借用早期spark-sql所用的parser，执行引擎相近，暂时没有实现存储相关功能。}
       \end{cvitems}
     }
 \end{cventries}
